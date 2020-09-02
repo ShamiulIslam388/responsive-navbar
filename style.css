@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    background: #2E86C1;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 80px;
+    padding: 0 100px;
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+a.active, a:hover {
+    background-color: #21618C;
+    border-radius: 5px;
+    transition: 1s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background: url(images/bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh-80px);
+}
+@media screen and (max-width: 900px) {
+    label.logo {
+        font-size: 30px;
+        padding: 0 50px;
+    }
+    nav ul li a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .checkbtn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background-color: #5D6D7E;
+        text-align: center;
+        top: 80px;
+        left: -100%;
+        transition: all 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a.active, a:hover {
+        background: none;
+        color: #F8C471;
+    }
+
+    #check:checked~ ul {
+        left: 0;
+    }
+}
+
